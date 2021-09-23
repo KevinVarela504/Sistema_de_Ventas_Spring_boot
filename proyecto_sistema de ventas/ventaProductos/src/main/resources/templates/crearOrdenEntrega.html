@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" content="text/html; charset=UTF-8">
+<title>Programacion orientada a Objetos</title>
+<!-- CSS only -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous">
+
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <h2> Bienvenido Administrador genere la orden de entrega</h2>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      
+      
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+</header>
+
+<main role="main">     
+      <hr>
+      <div class="container"> 
+
+        <div class="card">
+          <h4 class="card-header"><strong>Formulario de creacion de orden de Entrega</strong></h4>              
+          <div class="card-body">
+            <form th:action="@{/ordenentrega/crearOrdenEntrega}" method="post">
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Id Orden Entrega</label>
+			    <input type="number" class="form-control" id="id" name="id" placeholder="ingrese un id para la orden de entrega" >
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Fecha de Creacion</label>
+			    <input type="date" class="form-control" id="fechaCreacion" name="fechaCreacion" placeholder="ingrese fecha de creacion de la orden entrega" >
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Fecha de entrega</label>
+			    <input type="date" class="form-control" id="fechaEntrega" name="fechaEntrega" placeholder="ingrese la fecha de entrega" >
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">id del Empleado</label>
+			    <input type="number" class="form-control" id="idEmpleado" name="idEmpleado" placeholder="ingrese el id del empleado asignado a la orden de entrega" >
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">id del pedido</label>
+			    <input type="number" class="form-control" id="idPedido" name="idPedido" placeholder="ingrese el id del pedido  de la orden de entrega" >
+			  </div>
+			  
+			  <button type="submit" class="btn btn-primary">crear</button>
+			</form>
+          </div>
+        </div>
+      </div> 
+
+    </main>
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+</body>
+</html>>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="ISO-8859-1" content="text/html; charset=UTF-8" >
+<title>Programacion Orientada a Objetos</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <img th:src="@{/images/logotm.png}" width="136" height="136" >
+ <h2> Bienvenido este es el listado de provedores</h2>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      <a class="nav-link"  href="/principal/GeneralB"> Pagina principal Administrador</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+</header>
+ <table  class="table table-hover" >
+	<thead class="thead-dark">
+		<tr>
+			<th>id Provedor</th>
+			<th>Nombre</th>
+			<th>telefono</th>
+			<th>direccion</th>
+			<th>correo</th>
+			<th>rtn</th>
+		</tr>
+	</thead>
+	<tr th:each="tmpProvedor:${provedor}">
+	<td th:text="${tmpProvedor.idProvedor}"></td>
+	<td th:text="${tmpProvedor.nombre}"></td>
+	<td th:text="${tmpProvedor.telefono}"></td>
+    <td th:text="${tmpProvedor.direccion}"></td>
+	<td th:text="${tmpProvedor.correo}"></td>
+	<td th:text="${tmpProvedor.rtn}"></td>
+	</tr>
+	</table>
+ 
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" content="text/html; charset=UTF-8">
+<title>Programacion Orientada a Objetos</title>
+<!-- CSS only -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous">
+
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <h2> Registre sus Direcciones</h2>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+         
+      
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+</header>
+
+<main role="main">     
+      <hr>
+      <div class="container"> 
+
+        <div class="card">
+          <h4 class="card-header"><strong>Formulario de registro para Direcciones del Cliente</strong></h4>              
+          <div class="card-body">
+            <form th:action="@{/direccion/crearDireccion}" method="post">
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Id Direccion</label>
+			    <input type="number" class="form-control" id="id" name="id" placeholder="ingrese id para sus direcciones" min="100" max="1000">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Direccion Fisica</label>
+			    <input type="text" class="form-control" id="direccionfisica" name="direccionfisica" placeholder="ingrese direccion Fisica" >
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Direccion Despacho</label>
+			    <input type="text" class="form-control" id="direcciondespacho" name="direcciondespacho" placeholder="ingrese direccion de despacho" >
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">ID Cliente</label>
+			    <input type="number" class="form-control" id="idCliente" name="idCliente" placeholder="ingrese su id de Cliente" >
+			  </div>
+			  
+			  <button type="submit" class="btn btn-primary">Registar Direcciones</button>
+			  
+			   <a class="nav-link"  href="/pagina/principalClientes"> Pagina principal Cliente</a>
+			</form>
+          </div>
+        </div>
+      </div> 
+
+    </main>
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+</body>
+</html>
